@@ -1,0 +1,22 @@
+mysql_version: "8.0"
+mysql_root_password: "root123"
+
+ubuntu_packages:
+  - "mysql-server-{{ mysql_version }}"
+  - python3-pymysql
+
+mysql_users:
+  - name: shanu
+    password: Shanu@123
+    database: mydb
+    priv: "mydb.*:ALL"
+
+  - name: dayal
+    password: Dayal@123
+    database: testdb
+    priv: "testdb.*:SELECT,INSERT"
+
+  - name: aayush
+    password: Aayush@123
+    database: aayush_db
+    priv: "aayush_db.*:UPDATE,DELETE"
